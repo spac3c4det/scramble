@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Scramble</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="https://clojurescript.org/images/cljs-logo-icon-32.png">
+  </head>
+  <body>
+    <div id="app">
+      <!-- str1 -->
+      <label for="str1">str1</label>
+      <input type="text" id="str1"></input>
+      <br/>
+
+      <!-- str2 -->
+      <label for="str2">str2</label>
+      <input type="text" id="str2"></input>
+      <br/>
+      <br/>
+
+      <!--- output -->
+      <button type="button" id="submit">
+	  (scramble?)
+      </button>
+      <span id="scramble?-out"></span>
+    </div>
+    
+    <script src="/cljs-out/main.js" type="text/javascript"></script>
+  </body>
+</html>

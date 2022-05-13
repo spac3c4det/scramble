@@ -1,0 +1,3 @@
+{:scramble.server/adapter {:port 8080
+                           :handler #ig/ref :scramble.server/handler}
+ :scramble.server/handler nil}

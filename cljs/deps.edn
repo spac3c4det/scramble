@@ -1,0 +1,11 @@
+{:paths ["src" "resources" "target"]
+ :deps {org.clojure/clojurescript {:mvn/version "1.11.4"}
+        com.bhauman/figwheel-main {:mvn/version "0.2.17"}
+        cljs-http/cljs-http       {:mvn/version "0.1.46"}}
+
+ :aliases
+ {:build/dev
+  {:main-opts ["-m" "figwheel.main" "--compile" "scramble.core" "--repl"]}
+
+  :build/production
+  {:main-opts ["-m" "figwheel.main" "-O" "advanced" "-bo" "scramble"]}}}

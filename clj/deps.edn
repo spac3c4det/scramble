@@ -1,0 +1,22 @@
+{:paths ["src" "resources"]
+ :deps {org.clojure/clojure {:mvn/version "1.11.1"}
+        clj-http/clj-http   {:mvn/version "3.12.3"}
+        cheshire/cheshire   {:mvn/version "5.10.2"}
+        ring/ring           {:mvn/version "1.9.5"}
+        ring-cors/ring-cors {:mvn/version "0.1.13"}
+        integrant/integrant {:mvn/version "0.8.0"}}
+
+ :aliases
+ {:env/dev
+  {:extra-paths ["dev"]
+   :extra-deps {integrant/repl {:mvn/version "0.3.2"}}}
+
+  :env/test
+  {:extra-paths ["test"]}
+
+  :run/test
+  {:extra-paths ["test"]
+   :extra-deps  {com.cognitect/test-runner
+                 {:git/url "https://github.com/cognitect-labs/test-runner.git"
+                  :sha     "f7ef16dc3b8332b0d77bc0274578ad5270fbfedd"}}
+   :main-opts   ["-m" "cognitect.test-runner"]}}}
